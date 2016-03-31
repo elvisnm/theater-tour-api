@@ -1,0 +1,18 @@
+{
+    "name": "theater-tour-api",
+    "script": "build/index.js",
+    "exec_mode": "cluster_mode",
+    "instances": 0,
+    "max_memory_restart": "800M",
+    "env_dev": {
+        "NODE_ENV": "development",
+        "REDIS_HOST": "localhost",
+        "REDIS_PORT": "6379"
+    },
+    "env_production": {
+        "NODE_ENV": "production",
+        "REDIS_HOST": "",
+        "REDIS_PORT": "6379",
+        "AWS_S3_BUCKET": "theater-tour"
+    }
+}
