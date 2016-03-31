@@ -3,6 +3,7 @@ import mongooseMergePlugin from 'mongoose-merge-plugin';
 import mongoConfig from '../configs/mongo';
 
 mongoose.plugin(mongooseMergePlugin);
+mongoose.set('debug', true);
 
 const mongoSigleton = mongoose.connect(mongoConfig.uri, mongoConfig.options, err => {
     if (err) {
